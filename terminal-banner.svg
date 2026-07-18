@@ -1,108 +1,198 @@
-<svg width="1000" height="420" viewBox="0 0 1000 420" xmlns="http://www.w3.org/2000/svg">
+<svg width="1000" height="408" viewBox="0 0 1000 408" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <style>
-      .term-bg { fill: #0d1117; }
-      .titlebar { fill: #161b22; }
-      .dot-red { fill: #ff5f56; }
-      .dot-amber { fill: #ffbd2e; }
-      .dot-green { fill: #27c93f; }
-      .path { fill: #8b949e; font: 500 13px 'SF Mono', 'Fira Code', monospace; }
-      .prompt-user { fill: #58a6ff; font: 600 15px 'Fira Code', monospace; }
-      .prompt-sep { fill: #8b949e; font: 600 15px 'Fira Code', monospace; }
-      .prompt-dir { fill: #d29922; font: 600 15px 'Fira Code', monospace; }
-      .cmd { fill: #c9d1d9; font: 15px 'Fira Code', monospace; }
-      .comment { fill: #6e7681; font: 13px 'Fira Code', monospace; }
-      .out-key { fill: #79c0ff; font: 14px 'Fira Code', monospace; }
-      .out-str { fill: #a5d6ff; font: 13px 'Fira Code', monospace; }
-      .stmt { fill: #f0f6fc; font: 700 25px 'Fira Code', monospace; }
-      .stmt-accent { fill: #58a6ff; font: 700 25px 'Fira Code', monospace; }
-      .cursor { fill: #58a6ff; }
+      .term-bg { fill: #241f31; }
+      .titlebar { fill: #2d2a3d; }
+      .fedora-dot { fill: #3c6eb4; }
+      .path { fill: #9a9996; font: 500 12.5px 'Fira Code', 'Cascadia Code', 'JetBrains Mono', monospace; }
+      .prompt-user { fill: #8ff0a4; font: 600 15px 'Fira Code', 'Cascadia Code', monospace; }
+      .prompt-at { fill: #f6f5f4; font: 600 15px 'Fira Code', 'Cascadia Code', monospace; }
+      .prompt-host { fill: #8ff0a4; font: 600 15px 'Fira Code', 'Cascadia Code', monospace; }
+      .prompt-sep { fill: #f6f5f4; font: 600 15px 'Fira Code', 'Cascadia Code', monospace; }
+      .prompt-dir { fill: #62a0ea; font: 600 15px 'Fira Code', 'Cascadia Code', monospace; }
+      .prompt-sym { fill: #f6f5f4; font: 600 15px 'Fira Code', 'Cascadia Code', monospace; }
+      .cmd { fill: #f6f5f4; font: 15px 'Fira Code', 'Cascadia Code', monospace; }
+      .comment { fill: #77767b; font: 13px 'Fira Code', 'Cascadia Code', monospace; }
+      .out-key { fill: #8ff0a4; font: 14px 'Fira Code', 'Cascadia Code', monospace; }
+      .out-str { fill: #99c1f1; font: 13.5px 'Fira Code', 'Cascadia Code', monospace; }
+      .cursor-blk { fill: #f6f5f4; }
     </style>
     <clipPath id="term-clip">
-      <rect x="0" y="0" width="1000" height="420" rx="12" ry="12"/>
+      <rect x="0" y="0" width="1000" height="408" rx="10" ry="10"/>
     </clipPath>
   </defs>
 
   <g clip-path="url(#term-clip)">
-    <rect class="term-bg" x="0" y="0" width="1000" height="420"/>
+    <rect class="term-bg" x="0" y="0" width="1000" height="408"/>
 
-    <!-- title bar -->
+    <!-- Title bar -->
     <rect class="titlebar" x="0" y="0" width="1000" height="36"/>
-    <circle class="dot-red" cx="22" cy="18" r="6.5"/>
-    <circle class="dot-amber" cx="44" cy="18" r="6.5"/>
-    <circle class="dot-green" cx="66" cy="18" r="6.5"/>
-    <text class="path" x="500" y="22.5" text-anchor="middle">gideon@kampala: ~/ogwang-gift-gideon</text>
+    <circle class="fedora-dot" cx="24" cy="18" r="6"/>
+    <text class="path" x="42" y="22.5">gideon@andromeda43</text>
+    <text class="path" x="500" y="22.5" text-anchor="middle">bash — 100x30</text>
 
-    <!-- ===== Line 1: whoami ===== -->
-    <g opacity="0">
-      <text class="prompt-user" x="24" y="70">gideon</text>
-      <text class="prompt-sep" x="86" y="70">@kampala</text>
-      <text class="prompt-dir" x="168" y="70">~</text>
-      <text class="prompt-sep" x="182" y="70">$</text>
-      <text class="cmd" x="198" y="70">whoami --role</text>
-      <animate attributeName="opacity" from="0" to="1" begin="0.1s" dur="0.1s" fill="freeze"/>
+    <!-- Window controls — GNOME Adwaita style -->
+    <!-- Minimize -->
+    <g transform="translate(904, 6)">
+      <circle cx="12" cy="12" r="11" fill="transparent"/>
+      <line x1="7" y1="12" x2="17" y2="12" stroke="#9a9996" stroke-width="1.6" stroke-linecap="round"/>
     </g>
-    <g opacity="0">
-      <text class="out-str" x="24" y="98">&gt; Full-stack developer building the</text>
-      <text class="out-str" x="24" y="118">&gt; operating layer for African institutions.</text>
-      <animate attributeName="opacity" from="0" to="1" begin="0.9s" dur="0.3s" fill="freeze"/>
+    <!-- Maximize -->
+    <g transform="translate(930, 6)">
+      <circle cx="12" cy="12" r="11" fill="transparent"/>
+      <rect x="6.5" y="6.5" width="11" height="11" rx="2" fill="none" stroke="#9a9996" stroke-width="1.6"/>
     </g>
-
-    <!-- ===== Line 2: ls currently-building ===== -->
-    <g opacity="0">
-      <text class="prompt-user" x="24" y="154">gideon</text>
-      <text class="prompt-sep" x="86" y="154">@kampala</text>
-      <text class="prompt-dir" x="168" y="154">~</text>
-      <text class="prompt-sep" x="182" y="154">$</text>
-      <text class="cmd" x="198" y="154">ls --currently-building</text>
-      <animate attributeName="opacity" from="0" to="1" begin="1.3s" dur="0.1s" fill="freeze"/>
-    </g>
-    <g opacity="0">
-      <text class="out-key" x="24" y="180">drwx  Acadex</text>
-      <text class="comment" x="200" y="180"># multi-tenant school SaaS, Uganda-first</text>
-      <text class="out-key" x="24" y="202">drwx  RestaurantOS</text>
-      <text class="comment" x="240" y="202"># ordering, kitchen &amp; staff ops in one system</text>
-      <animate attributeName="opacity" from="0" to="1" begin="2.1s" dur="0.3s" fill="freeze"/>
+    <!-- Close -->
+    <g transform="translate(956, 6)">
+      <circle cx="12" cy="12" r="11" fill="transparent"/>
+      <line x1="7" y1="7" x2="17" y2="17" stroke="#9a9996" stroke-width="1.6" stroke-linecap="round"/>
+      <line x1="17" y1="7" x2="7" y2="17" stroke="#9a9996" stroke-width="1.6" stroke-linecap="round"/>
     </g>
 
-    <!-- ===== Line 3: stack ===== -->
-    <g opacity="0">
-      <text class="prompt-user" x="24" y="238">gideon</text>
-      <text class="prompt-sep" x="86" y="238">@kampala</text>
-      <text class="prompt-dir" x="168" y="238">~</text>
-      <text class="prompt-sep" x="182" y="238">$</text>
-      <text class="cmd" x="198" y="238">cat stack.json</text>
-      <animate attributeName="opacity" from="0" to="1" begin="2.6s" dur="0.1s" fill="freeze"/>
+    <g opacity="0"><text class="prompt-user" x="24" y="70">gideon</text><text class="prompt-at" x="86" y="70">@</text><text class="prompt-host" x="94" y="70">andromeda43</text><text class="prompt-sep" x="230" y="70">:</text><text class="prompt-dir" x="240" y="70">~</text><text class="prompt-sym" x="256" y="70">$</text><animate attributeName="opacity" from="0" to="1" begin="0.30s" dur="0.01s" fill="freeze"/></g>
+    <g>
+      <text class="cmd" x="270.0" y="70" opacity="0">w<animate attributeName="opacity" from="0" to="1" begin="0.62s" dur="0.01s" fill="freeze"/></text>
+      <text class="cmd" x="278.7" y="70" opacity="0">h<animate attributeName="opacity" from="0" to="1" begin="0.69s" dur="0.01s" fill="freeze"/></text>
+      <text class="cmd" x="287.4" y="70" opacity="0">o<animate attributeName="opacity" from="0" to="1" begin="0.77s" dur="0.01s" fill="freeze"/></text>
+      <text class="cmd" x="296.1" y="70" opacity="0">a<animate attributeName="opacity" from="0" to="1" begin="0.82s" dur="0.01s" fill="freeze"/></text>
+      <text class="cmd" x="304.8" y="70" opacity="0">m<animate attributeName="opacity" from="0" to="1" begin="0.89s" dur="0.01s" fill="freeze"/></text>
+      <text class="cmd" x="313.5" y="70" opacity="0">m<animate attributeName="opacity" from="0" to="1" begin="0.96s" dur="0.01s" fill="freeze"/><animate attributeName="opacity" from="1" to="0" begin="1.63s" dur="0.01s" fill="freeze"/></text>
+      <text class="cmd" x="322.2" y="70" opacity="0">e<animate attributeName="opacity" from="0" to="1" begin="1.05s" dur="0.01s" fill="freeze"/><animate attributeName="opacity" from="1" to="0" begin="1.55s" dur="0.01s" fill="freeze"/></text>
+      <text class="cmd" x="313.5" y="70" opacity="0">i<animate attributeName="opacity" from="0" to="1" begin="1.98s" dur="0.01s" fill="freeze"/></text>
     </g>
+    <rect class="cursor-blk" x="270.0" y="56" width="10" height="18" opacity="0">
+      <animate attributeName="opacity" from="0" to="1" begin="0.55s" dur="0.01s" fill="freeze"/>
+      <animate attributeName="x" values="270.0;278.7;287.4;296.1;304.8;313.5;322.2;330.9;330.9;322.2;313.5;313.5;322.2" keyTimes="0.0000;0.0506;0.1007;0.1515;0.1850;0.2347;0.2885;0.3491;0.6505;0.6986;0.7569;0.8720;1.0000" begin="0.55s" dur="1.43s" fill="freeze"/>
+      <animate attributeName="opacity" from="1" to="0" begin="2.03s" dur="0.01s" fill="freeze"/>
+    </rect>
     <g opacity="0">
-      <text class="out-str" x="24" y="264">[TypeScript, Python, Next.js, React, Tailwind CSS,</text>
-      <text class="out-str" x="24" y="282">Node.js, Prisma, PostgreSQL]</text>
-      <animate attributeName="opacity" from="0" to="1" begin="3.3s" dur="0.3s" fill="freeze"/>
+      <text class="out-str" x="24" y="92">gideon — full-stack developer, Kampala, Uganda 🇺🇬 [UG]</text>
+      <animate attributeName="opacity" from="0" to="1" begin="2.33s" dur="0.01s" fill="freeze"/>
     </g>
-
-    <!-- ===== Final: the statement ===== -->
-    <g opacity="0">
-      <text class="prompt-user" x="24" y="318">gideon</text>
-      <text class="prompt-sep" x="86" y="318">@kampala</text>
-      <text class="prompt-dir" x="168" y="318">~</text>
-      <text class="prompt-sep" x="182" y="318">$</text>
-      <text class="cmd" x="198" y="318">./ship.sh --no-excuses</text>
-      <animate attributeName="opacity" from="0" to="1" begin="3.8s" dur="0.1s" fill="freeze"/>
+    <g opacity="0"><text class="prompt-user" x="24" y="122">gideon</text><text class="prompt-at" x="86" y="122">@</text><text class="prompt-host" x="94" y="122">andromeda43</text><text class="prompt-sep" x="230" y="122">:</text><text class="prompt-dir" x="240" y="122">~</text><text class="prompt-sym" x="256" y="122">$</text><animate attributeName="opacity" from="0" to="1" begin="2.88s" dur="0.01s" fill="freeze"/></g>
+    <g>
+      <text class="cmd" x="270.0" y="122" opacity="0">c<animate attributeName="opacity" from="0" to="1" begin="3.20s" dur="0.01s" fill="freeze"/></text>
+      <text class="cmd" x="278.7" y="122" opacity="0">a<animate attributeName="opacity" from="0" to="1" begin="3.26s" dur="0.01s" fill="freeze"/></text>
+      <text class="cmd" x="287.4" y="122" opacity="0">t<animate attributeName="opacity" from="0" to="1" begin="3.33s" dur="0.01s" fill="freeze"/></text>
+      <text class="cmd" x="296.1" y="122" opacity="0">&#160;<animate attributeName="opacity" from="0" to="1" begin="3.45s" dur="0.01s" fill="freeze"/></text>
+      <text class="cmd" x="304.8" y="122" opacity="0">p<animate attributeName="opacity" from="0" to="1" begin="3.53s" dur="0.01s" fill="freeze"/></text>
+      <text class="cmd" x="313.5" y="122" opacity="0">h<animate attributeName="opacity" from="0" to="1" begin="3.58s" dur="0.01s" fill="freeze"/></text>
+      <text class="cmd" x="322.2" y="122" opacity="0">i<animate attributeName="opacity" from="0" to="1" begin="3.64s" dur="0.01s" fill="freeze"/></text>
+      <text class="cmd" x="330.9" y="122" opacity="0">l<animate attributeName="opacity" from="0" to="1" begin="3.73s" dur="0.01s" fill="freeze"/></text>
+      <text class="cmd" x="339.6" y="122" opacity="0">o<animate attributeName="opacity" from="0" to="1" begin="3.82s" dur="0.01s" fill="freeze"/></text>
+      <text class="cmd" x="348.3" y="122" opacity="0">s<animate attributeName="opacity" from="0" to="1" begin="3.94s" dur="0.01s" fill="freeze"/></text>
+      <text class="cmd" x="357.0" y="122" opacity="0">o<animate attributeName="opacity" from="0" to="1" begin="4.02s" dur="0.01s" fill="freeze"/></text>
+      <text class="cmd" x="365.7" y="122" opacity="0">p<animate attributeName="opacity" from="0" to="1" begin="4.10s" dur="0.01s" fill="freeze"/></text>
+      <text class="cmd" x="374.4" y="122" opacity="0">h<animate attributeName="opacity" from="0" to="1" begin="4.17s" dur="0.01s" fill="freeze"/></text>
+      <text class="cmd" x="383.1" y="122" opacity="0">y<animate attributeName="opacity" from="0" to="1" begin="4.27s" dur="0.01s" fill="freeze"/></text>
+      <text class="cmd" x="391.8" y="122" opacity="0">.<animate attributeName="opacity" from="0" to="1" begin="4.37s" dur="0.01s" fill="freeze"/></text>
+      <text class="cmd" x="400.5" y="122" opacity="0">t<animate attributeName="opacity" from="0" to="1" begin="4.49s" dur="0.01s" fill="freeze"/></text>
+      <text class="cmd" x="409.2" y="122" opacity="0">x<animate attributeName="opacity" from="0" to="1" begin="4.58s" dur="0.01s" fill="freeze"/></text>
+      <text class="cmd" x="417.9" y="122" opacity="0">t<animate attributeName="opacity" from="0" to="1" begin="4.68s" dur="0.01s" fill="freeze"/></text>
     </g>
-
+    <rect class="cursor-blk" x="270.0" y="108" width="10" height="18" opacity="0">
+      <animate attributeName="opacity" from="0" to="1" begin="3.13s" dur="0.01s" fill="freeze"/>
+      <animate attributeName="x" values="270.0;278.7;287.4;296.1;304.8;313.5;322.2;330.9;339.6;348.3;357.0;365.7;374.4;383.1;391.8;400.5;409.2;417.9;426.6" keyTimes="0.0000;0.0452;0.0837;0.1296;0.2039;0.2592;0.2901;0.3280;0.3868;0.4453;0.5249;0.5723;0.6255;0.6712;0.7361;0.8015;0.8773;0.9348;1.0000" begin="3.13s" dur="1.54s" fill="freeze"/>
+      <animate attributeName="opacity" from="1" to="0" begin="4.73s" dur="0.01s" fill="freeze"/>
+    </rect>
     <g opacity="0">
-      <text class="stmt" x="24" y="360">I build systems that run</text>
-      <text class="stmt-accent" x="24" y="392">institutions while the world sleeps.</text>
-      <animate attributeName="opacity" from="0" to="1" begin="4.5s" dur="0.5s" fill="freeze"/>
+      <text class="out-str" x="24" y="144">I plan before I build. Every project starts</text>
+      <text class="out-str" x="24" y="166">with a spec, not a blank editor.</text>
+      <animate attributeName="opacity" from="0" to="1" begin="5.03s" dur="0.01s" fill="freeze"/>
     </g>
-
+    <g opacity="0"><text class="prompt-user" x="24" y="196">gideon</text><text class="prompt-at" x="86" y="196">@</text><text class="prompt-host" x="94" y="196">andromeda43</text><text class="prompt-sep" x="230" y="196">:</text><text class="prompt-dir" x="240" y="196">~</text><text class="prompt-sym" x="256" y="196">$</text><animate attributeName="opacity" from="0" to="1" begin="5.58s" dur="0.01s" fill="freeze"/></g>
+    <g>
+      <text class="cmd" x="270.0" y="196" opacity="0">l<animate attributeName="opacity" from="0" to="1" begin="5.93s" dur="0.01s" fill="freeze"/></text>
+      <text class="cmd" x="278.7" y="196" opacity="0">s<animate attributeName="opacity" from="0" to="1" begin="6.00s" dur="0.01s" fill="freeze"/></text>
+      <text class="cmd" x="287.4" y="196" opacity="0">&#160;<animate attributeName="opacity" from="0" to="1" begin="6.18s" dur="0.01s" fill="freeze"/></text>
+      <text class="cmd" x="296.1" y="196" opacity="0">-<animate attributeName="opacity" from="0" to="1" begin="6.28s" dur="0.01s" fill="freeze"/></text>
+      <text class="cmd" x="304.8" y="196" opacity="0">-<animate attributeName="opacity" from="0" to="1" begin="6.42s" dur="0.01s" fill="freeze"/></text>
+      <text class="cmd" x="313.5" y="196" opacity="0">c<animate attributeName="opacity" from="0" to="1" begin="6.48s" dur="0.01s" fill="freeze"/></text>
+      <text class="cmd" x="322.2" y="196" opacity="0">u<animate attributeName="opacity" from="0" to="1" begin="6.58s" dur="0.01s" fill="freeze"/></text>
+      <text class="cmd" x="330.9" y="196" opacity="0">r<animate attributeName="opacity" from="0" to="1" begin="6.64s" dur="0.01s" fill="freeze"/></text>
+      <text class="cmd" x="339.6" y="196" opacity="0">r<animate attributeName="opacity" from="0" to="1" begin="6.70s" dur="0.01s" fill="freeze"/></text>
+      <text class="cmd" x="348.3" y="196" opacity="0">e<animate attributeName="opacity" from="0" to="1" begin="6.77s" dur="0.01s" fill="freeze"/></text>
+      <text class="cmd" x="357.0" y="196" opacity="0">n<animate attributeName="opacity" from="0" to="1" begin="6.84s" dur="0.01s" fill="freeze"/></text>
+      <text class="cmd" x="365.7" y="196" opacity="0">t<animate attributeName="opacity" from="0" to="1" begin="6.92s" dur="0.01s" fill="freeze"/></text>
+      <text class="cmd" x="374.4" y="196" opacity="0">l<animate attributeName="opacity" from="0" to="1" begin="7.00s" dur="0.01s" fill="freeze"/></text>
+      <text class="cmd" x="383.1" y="196" opacity="0">y<animate attributeName="opacity" from="0" to="1" begin="7.08s" dur="0.01s" fill="freeze"/></text>
+      <text class="cmd" x="391.8" y="196" opacity="0">-<animate attributeName="opacity" from="0" to="1" begin="7.20s" dur="0.01s" fill="freeze"/></text>
+      <text class="cmd" x="400.5" y="196" opacity="0">s<animate attributeName="opacity" from="0" to="1" begin="7.28s" dur="0.01s" fill="freeze"/></text>
+      <text class="cmd" x="409.2" y="196" opacity="0">h<animate attributeName="opacity" from="0" to="1" begin="7.31s" dur="0.01s" fill="freeze"/></text>
+      <text class="cmd" x="417.9" y="196" opacity="0">i<animate attributeName="opacity" from="0" to="1" begin="7.47s" dur="0.01s" fill="freeze"/></text>
+      <text class="cmd" x="426.6" y="196" opacity="0">p<animate attributeName="opacity" from="0" to="1" begin="7.54s" dur="0.01s" fill="freeze"/></text>
+      <text class="cmd" x="435.3" y="196" opacity="0">p<animate attributeName="opacity" from="0" to="1" begin="7.59s" dur="0.01s" fill="freeze"/></text>
+      <text class="cmd" x="444.0" y="196" opacity="0">i<animate attributeName="opacity" from="0" to="1" begin="7.68s" dur="0.01s" fill="freeze"/></text>
+      <text class="cmd" x="452.7" y="196" opacity="0">n<animate attributeName="opacity" from="0" to="1" begin="7.77s" dur="0.01s" fill="freeze"/></text>
+      <text class="cmd" x="461.4" y="196" opacity="0">g<animate attributeName="opacity" from="0" to="1" begin="7.86s" dur="0.01s" fill="freeze"/></text>
+    </g>
+    <rect class="cursor-blk" x="270.0" y="182" width="10" height="18" opacity="0">
+      <animate attributeName="opacity" from="0" to="1" begin="5.83s" dur="0.01s" fill="freeze"/>
+      <animate attributeName="x" values="270.0;278.7;287.4;296.1;304.8;313.5;322.2;330.9;339.6;348.3;357.0;365.7;374.4;383.1;391.8;400.5;409.2;417.9;426.6;435.3;444.0;452.7;461.4;470.1" keyTimes="0.0000;0.0496;0.0857;0.1753;0.2219;0.2928;0.3243;0.3697;0.4016;0.4321;0.4664;0.4983;0.5389;0.5782;0.6166;0.6764;0.7148;0.7296;0.8117;0.8440;0.8710;0.9151;0.9581;1.0000" begin="5.83s" dur="2.03s" fill="freeze"/>
+      <animate attributeName="opacity" from="1" to="0" begin="7.91s" dur="0.01s" fill="freeze"/>
+    </rect>
     <g opacity="0">
-      <rect class="cursor" x="640" y="380" width="11" height="18">
-        <animate attributeName="opacity" values="1;0;1" dur="1s" begin="5s" repeatCount="indefinite"/>
+      <text class="out-key" x="24" y="218">Acadex</text>
+      <text class="comment" x="164" y="218"># multi-tenant school SaaS for East Africa</text>
+      <text class="out-key" x="24" y="240">RestaurantOS</text>
+      <text class="comment" x="164" y="240"># POS, kitchen &amp; ops for restaurants</text>
+      <animate attributeName="opacity" from="0" to="1" begin="8.21s" dur="0.01s" fill="freeze"/>
+    </g>
+    <g opacity="0"><text class="prompt-user" x="24" y="270">gideon</text><text class="prompt-at" x="86" y="270">@</text><text class="prompt-host" x="94" y="270">andromeda43</text><text class="prompt-sep" x="230" y="270">:</text><text class="prompt-dir" x="240" y="270">~</text><text class="prompt-sym" x="256" y="270">$</text><animate attributeName="opacity" from="0" to="1" begin="8.76s" dur="0.01s" fill="freeze"/></g>
+    <g>
+      <text class="cmd" x="270.0" y="270" opacity="0">s<animate attributeName="opacity" from="0" to="1" begin="9.07s" dur="0.01s" fill="freeze"/></text>
+      <text class="cmd" x="278.7" y="270" opacity="0">t<animate attributeName="opacity" from="0" to="1" begin="9.18s" dur="0.01s" fill="freeze"/></text>
+      <text class="cmd" x="287.4" y="270" opacity="0">a<animate attributeName="opacity" from="0" to="1" begin="9.23s" dur="0.01s" fill="freeze"/></text>
+      <text class="cmd" x="296.1" y="270" opacity="0">c<animate attributeName="opacity" from="0" to="1" begin="9.30s" dur="0.01s" fill="freeze"/></text>
+      <text class="cmd" x="304.8" y="270" opacity="0">k<animate attributeName="opacity" from="0" to="1" begin="9.37s" dur="0.01s" fill="freeze"/></text>
+      <text class="cmd" x="313.5" y="270" opacity="0">&#160;<animate attributeName="opacity" from="0" to="1" begin="9.47s" dur="0.01s" fill="freeze"/></text>
+      <text class="cmd" x="322.2" y="270" opacity="0">-<animate attributeName="opacity" from="0" to="1" begin="9.57s" dur="0.01s" fill="freeze"/></text>
+      <text class="cmd" x="330.9" y="270" opacity="0">-<animate attributeName="opacity" from="0" to="1" begin="9.82s" dur="0.01s" fill="freeze"/></text>
+      <text class="cmd" x="339.6" y="270" opacity="0">l<animate attributeName="opacity" from="0" to="1" begin="9.88s" dur="0.01s" fill="freeze"/></text>
+      <text class="cmd" x="348.3" y="270" opacity="0">i<animate attributeName="opacity" from="0" to="1" begin="10.08s" dur="0.01s" fill="freeze"/></text>
+      <text class="cmd" x="357.0" y="270" opacity="0">s<animate attributeName="opacity" from="0" to="1" begin="10.17s" dur="0.01s" fill="freeze"/></text>
+      <text class="cmd" x="365.7" y="270" opacity="0">t<animate attributeName="opacity" from="0" to="1" begin="10.25s" dur="0.01s" fill="freeze"/></text>
+    </g>
+    <rect class="cursor-blk" x="270.0" y="256" width="10" height="18" opacity="0">
+      <animate attributeName="opacity" from="0" to="1" begin="9.01s" dur="0.01s" fill="freeze"/>
+      <animate attributeName="x" values="270.0;278.7;287.4;296.1;304.8;313.5;322.2;330.9;339.6;348.3;357.0;365.7;374.4" keyTimes="0.0000;0.0522;0.1372;0.1820;0.2357;0.2906;0.3749;0.4535;0.6535;0.7028;0.8599;0.9286;1.0000" begin="9.01s" dur="1.25s" fill="freeze"/>
+      <animate attributeName="opacity" from="1" to="0" begin="10.30s" dur="0.01s" fill="freeze"/>
+    </rect>
+    <g opacity="0">
+      <text class="out-str" x="24" y="292">TypeScript · Python · Next.js · React · Prisma · PostgreSQL</text>
+      <animate attributeName="opacity" from="0" to="1" begin="10.60s" dur="0.01s" fill="freeze"/>
+    </g>
+    <g opacity="0"><text class="prompt-user" x="24" y="322">gideon</text><text class="prompt-at" x="86" y="322">@</text><text class="prompt-host" x="94" y="322">andromeda43</text><text class="prompt-sep" x="230" y="322">:</text><text class="prompt-dir" x="240" y="322">~</text><text class="prompt-sym" x="256" y="322">$</text><animate attributeName="opacity" from="0" to="1" begin="11.15s" dur="0.01s" fill="freeze"/></g>
+    <g>
+      <text class="cmd" x="270.0" y="322" opacity="0">e<animate attributeName="opacity" from="0" to="1" begin="11.49s" dur="0.01s" fill="freeze"/></text>
+      <text class="cmd" x="278.7" y="322" opacity="0">c<animate attributeName="opacity" from="0" to="1" begin="11.58s" dur="0.01s" fill="freeze"/></text>
+      <text class="cmd" x="287.4" y="322" opacity="0">h<animate attributeName="opacity" from="0" to="1" begin="11.64s" dur="0.01s" fill="freeze"/></text>
+      <text class="cmd" x="296.1" y="322" opacity="0">o<animate attributeName="opacity" from="0" to="1" begin="11.72s" dur="0.01s" fill="freeze"/></text>
+      <text class="cmd" x="304.8" y="322" opacity="0">&#160;<animate attributeName="opacity" from="0" to="1" begin="11.82s" dur="0.01s" fill="freeze"/></text>
+      <text class="cmd" x="313.5" y="322" opacity="0">$<animate attributeName="opacity" from="0" to="1" begin="11.92s" dur="0.01s" fill="freeze"/></text>
+      <text class="cmd" x="322.2" y="322" opacity="0">M<animate attributeName="opacity" from="0" to="1" begin="12.03s" dur="0.01s" fill="freeze"/></text>
+      <text class="cmd" x="330.9" y="322" opacity="0">O<animate attributeName="opacity" from="0" to="1" begin="12.14s" dur="0.01s" fill="freeze"/></text>
+      <text class="cmd" x="339.6" y="322" opacity="0">T<animate attributeName="opacity" from="0" to="1" begin="12.25s" dur="0.01s" fill="freeze"/></text>
+      <text class="cmd" x="348.3" y="322" opacity="0">T<animate attributeName="opacity" from="0" to="1" begin="12.39s" dur="0.01s" fill="freeze"/></text>
+      <text class="cmd" x="357.0" y="322" opacity="0">O<animate attributeName="opacity" from="0" to="1" begin="12.51s" dur="0.01s" fill="freeze"/></text>
+    </g>
+    <rect class="cursor-blk" x="270.0" y="308" width="10" height="18" opacity="0">
+      <animate attributeName="opacity" from="0" to="1" begin="11.40s" dur="0.01s" fill="freeze"/>
+      <animate attributeName="x" values="270.0;278.7;287.4;296.1;304.8;313.5;322.2;330.9;339.6;348.3;357.0;365.7" keyTimes="0.0000;0.0816;0.1617;0.2175;0.2843;0.3755;0.4707;0.5700;0.6676;0.7701;0.8989;1.0000" begin="11.40s" dur="1.10s" fill="freeze"/>
+      <animate attributeName="opacity" from="1" to="0" begin="12.56s" dur="0.01s" fill="freeze"/>
+    </rect>
+    <g opacity="0">
+      <text class="out-str" x="24" y="344">&quot;Systems that outlast motivation.&quot;</text>
+      <animate attributeName="opacity" from="0" to="1" begin="12.86s" dur="0.01s" fill="freeze"/>
+    </g>
+    <g opacity="0"><text class="prompt-user" x="24" y="378">gideon</text><text class="prompt-at" x="86" y="378">@</text><text class="prompt-host" x="94" y="378">andromeda43</text><text class="prompt-sep" x="230" y="378">:</text><text class="prompt-dir" x="240" y="378">~</text><text class="prompt-sym" x="256" y="378">$</text><animate attributeName="opacity" from="0" to="1" begin="13.41s" dur="0.01s" fill="freeze"/></g>
+    <g opacity="0">
+      <rect class="cursor-blk" x="270" y="364" width="10" height="18">
+        <animate attributeName="opacity" values="1;0;1" dur="1s" begin="13.71s" repeatCount="indefinite"/>
       </rect>
-      <animate attributeName="opacity" from="0" to="1" begin="5s" dur="0.1s" fill="freeze"/>
+      <animate attributeName="opacity" from="0" to="1" begin="13.71s" dur="0.01s" fill="freeze"/>
     </g>
   </g>
 
-  <rect x="0.5" y="0.5" width="999" height="419" rx="12" ry="12" fill="none" stroke="#30363d" stroke-width="1"/>
+  <rect x="0.5" y="0.5" width="999" height="407" rx="10" ry="10" fill="none" stroke="#3d3846" stroke-width="1"/>
 </svg>
